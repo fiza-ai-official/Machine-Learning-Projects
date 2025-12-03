@@ -1,43 +1,76 @@
-# MNIST Handwritten Digit Recognition  
-Machine Learning Project
-## 📌 Project Overview
-This project focuses on building a machine learning model that recognizes handwritten digits (0–9) using the MNIST dataset. The dataset contains 70,000 grayscale images of handwritten digits, each sized 28×28 pixels.  
-The goal is to train a classifier capable of identifying digits with high accuracy.
+# CIFAR-10 Image Classification using ResNet-18
 
----
+This project implements a **ResNet-18** based image classification model trained on the **CIFAR-10** dataset using **PyTorch**.
 
-## 🧠 What is MNIST?
-MNIST is a large collection of handwritten digits used as a standard benchmark in machine learning.  
-Think of it as a digital handwriting exam for computers — if a model can handle MNIST, it understands the basics of visual pattern recognition.
+As a beginner, this project helped me understand core deep learning concepts such as model architecture, training loops, data augmentation, GPU training, evaluation metrics, and debugging ML pipelines.
 
 ---
 
 ## 🚀 Features
-- Loads 70k handwritten digit images  
-- Normalizes pixel intensities  
-- Splits data into training & testing sets  
-- Trains a Logistic Regression model  
-- Evaluates accuracy and confusion matrix  
-- Lightweight (runs on any laptop without GPU)
+
+* Custom implementation of **ResNet-18** adapted for CIFAR-10
+* Training & validation loops using PyTorch
+* Image transformations & augmentations
+* GPU support for faster model training
+* Visualizations:
+
+  * Accuracy & loss curves
+  * Confusion matrix
+  * Sample predictions
+  * Optional Grad-CAM for heatmaps
+* Best model checkpoint saving
+
 
 ---
 
-## 📦 Tech Stack
-- Python  
-- scikit-learn  
-- NumPy  
-- Matplotlib  
+## 🧠 Key Concepts Learned
+
+* How CNNs work and why ResNet's skip connections help
+* CIFAR-10 normalization, batching, and augmentations
+* Writing full training loops (forward + backward propagation)
+* Optimizers, schedulers, loss functions
+* Handling common ML issues: shape mismatches, dataloader workers, slow training
+* Generating and interpreting evaluation plots
 
 ---
-📊 Results
-Accuracy: 92–94%
-Model performs strongly on clean digits
-Most confusion between visually similar digits (e.g., 5 vs 3, 9 vs 4)
 
-📝 Conclusion
-This project demonstrates the fundamentals of image-based machine learning.
-It served as a practical exercise during my Machine Learning Internship at Arch Technologies, helping me understand how preprocessing, model selection, and evaluation fit together in real-world ML tasks.
+## 🖥️ How to Run
 
-👩‍💻 Author
-Fiza Shoaib
-Machine Learning Intern
+1. Install dependencies:
+
+   ```bash
+   pip install torch torchvision matplotlib scikit-learn tqdm
+   ```
+2. Open the notebook:
+
+   ```bash
+   jupyter notebook CIFAR10_ResNet18.ipynb
+   ```
+3. Set runtime to GPU (recommended if using Google Colab).
+4. Run all cells — the notebook downloads CIFAR-10 automatically.
+5. After training, you will get:
+
+   * Accuracy curves
+   * Confusion matrix
+   * Sample predictions
+   * Model checkpoint (`best_checkpoint.pth`)
+
+---
+
+## 📊 Results
+
+* Achieved strong accuracy on CIFAR-10 using ResNet-18
+* Clear improvement with augmentations & tuned hyperparameters
+* Visualizations helped analyze model performance effectively
+
+---
+
+## 🙌 Acknowledgment
+
+Special thanks to **Sir Shoaib Farooq** for assigning this project, which significantly improved my understanding of machine learning.
+
+---
+
+## 🏷️ Tags
+
+`Machine Learning` `Deep Learning` `PyTorch` `CIFAR10` `ResNet` `Beginners` `AI Project`
